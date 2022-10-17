@@ -16,11 +16,23 @@ public class RoadSign implements InformationObject, Light {
         return typeOfSign;
     }
 
+    @Override
     public void switchOn(){
 
     }
 
+    @Override
     public void switchOff(){
+
+    }
+
+    @Override
+    public void moveSigh() {
+
+    }
+
+    @Override
+    public void removeSign() {
 
     }
 }

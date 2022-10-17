@@ -1,6 +1,7 @@
 package zones;
 
-import zones.Zone;
-
-public class Pavment implements Zone {
+public class Pavment extends Zone {
+    public Pavment(int l, int w, String t, boolean p) {
+        super(l, w, t, p);
+    }
 }

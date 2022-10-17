@@ -19,6 +19,7 @@ public class Bicycle implements TrafficParticipants, Footmobile {
         color = c;
     }
 
+    @Override
     public void setMaxVelocity(double maxVelocity) {
         this.maxVelocity = maxVelocity;
     }
@@ -31,16 +32,29 @@ public class Bicycle implements TrafficParticipants, Footmobile {
         return color;
     }
 
+    @Override
     public double getMaxVelocity() {
         return maxVelocity;
     }
 
+    @Override
     public void go(){
 
     }
 
+    @Override
     public void stop(){
 
+    }
+
+    @Override
+    public void turn(char c) {
+
+    }
+
+    @Override
+    public boolean ifIamOnTheRightZone(String zone) {
+        return false;
     }
 
     public void switchFrontGear(int numberOfFrontGear){
@@ -51,11 +65,22 @@ public class Bicycle implements TrafficParticipants, Footmobile {
 
     }
 
+    @Override
     public void accelerate(double acceleration){ //pozwala przyspieszać lub hamować (znak + lub -)
 
     }
 
     public void ring(){
+
+    }
+
+    @Override
+    public void scream(String sentence) {
+
+    }
+
+    @Override
+    public void enterTheVehicle(Automobile vehicle) {
 
     }
 }

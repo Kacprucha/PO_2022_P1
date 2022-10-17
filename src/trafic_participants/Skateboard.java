@@ -13,6 +13,7 @@ public class Skateboard implements TrafficParticipants, Footmobile {
         this.brand = brand;
     }
 
+    @Override
     public void setMaxVelocity(double maxVelocity) {
         this.maxVelocity = maxVelocity;
     }
@@ -21,19 +22,43 @@ public class Skateboard implements TrafficParticipants, Footmobile {
         return brand;
     }
 
+    @Override
     public double getMaxVelocity() {
         return maxVelocity;
     }
 
+    @Override
     public void go(){
 
     }
 
+    @Override
     public void stop(){
 
     }
 
+    @Override
+    public void turn(char c) {
+
+    }
+
+    @Override
+    public boolean ifIamOnTheRightZone(String zone) {
+        return false;
+    }
+
+    @Override
     public void accelerate(double acceleration){
+
+    }
+
+    @Override
+    public void scream(String sentence) {
+
+    }
+
+    @Override
+    public void enterTheVehicle(Automobile vehicle) {
 
     }
 }

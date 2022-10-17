@@ -47,10 +47,12 @@ public class TrafficContoler implements InformationObject {
 
     }
 
+    @Override
     public void moveSigh(){
 
     }
 
+    @Override
     public void removeSign(){
 
     }

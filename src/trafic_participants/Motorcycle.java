@@ -18,6 +18,7 @@ public class Motorcycle implements TrafficParticipants, Automobile {
         setMaxVelocity(mV);
     }
 
+    @Override
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -26,6 +27,7 @@ public class Motorcycle implements TrafficParticipants, Automobile {
         this.typeOfMotorcycle = typeOfMotorcycle;
     }
 
+    @Override
     public void setColor(String color) {
         this.color = color;
     }
@@ -34,10 +36,12 @@ public class Motorcycle implements TrafficParticipants, Automobile {
         this.productionDate = productionDate;
     }
 
+    @Override
     public void setMaxVelocity(double maxVelocity) {
         this.maxVelocity = maxVelocity;
     }
 
+    @Override
     public String getBrand() {
         return brand;
     }
@@ -50,30 +54,47 @@ public class Motorcycle implements TrafficParticipants, Automobile {
         return productionDate;
     }
 
+    @Override
     public String getColor() {
         return color;
     }
 
+    @Override
     public double getMaxVelocity() {
         return maxVelocity;
     }
 
+    @Override
     public void go(){
 
     }
 
+    @Override
     public void stop(){
 
     }
 
+    @Override
+    public void turn(char c) {
+
+    }
+
+    @Override
+    public boolean ifIamOnTheRightZone(String zone) {
+        return false;
+    }
+
+    @Override
     public void switchGear(int numberOfGear){
 
     }
 
+    @Override
     public void accelerate(double acceleration){
 
     }
 
+    @Override
     public void beep(){
 
     }

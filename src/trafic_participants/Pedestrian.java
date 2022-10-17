@@ -2,7 +2,7 @@ package trafic_participants;
 
 import trafic_participants.TrafficParticipants;
 
-public class Pedestrian implements TrafficParticipants {
+public class Pedestrian implements TrafficParticipants, Footmobile {
     private String name;
     private String surname;
     private double height;
@@ -33,6 +33,7 @@ public class Pedestrian implements TrafficParticipants {
         this.weight = weight;
     }
 
+    @Override
     public void setMaxVelocity(double maxVelocity) {
         this.maxVelocity = maxVelocity;
     }
@@ -53,17 +54,32 @@ public class Pedestrian implements TrafficParticipants {
         return weight;
     }
 
+    @Override
     public double getMaxVelocity() {
         return maxVelocity;
     }
 
+    @Override
     public void go(){
 
     }
 
+    @Override
     public void stop(){
 
     }
+
+    @Override
+    public void turn(char c) {
+
+    }
+
+    @Override
+    public boolean ifIamOnTheRightZone(String zone) {
+        return false;
+    }
+
+    @Override
     public void accelerate(double acceleration){
 
     }
@@ -80,11 +96,8 @@ public class Pedestrian implements TrafficParticipants {
 
     }
 
-    public void enterBus(){
-
-    }
-
-    public void enterTram(){
+    @Override
+    public void enterTheVehicle(Automobile vehicle){
 
     }
 }

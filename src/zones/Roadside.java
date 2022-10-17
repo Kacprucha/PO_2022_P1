@@ -1,6 +1,7 @@
 package zones;
 
-import zones.Zone;
-
-public class Roadside implements Zone {
+public class Roadside extends Zone {
+    public Roadside(int l, int w, String t, boolean p) {
+        super(l, w, t, p);
+    }
 }
