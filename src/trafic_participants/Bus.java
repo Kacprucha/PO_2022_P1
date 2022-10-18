@@ -10,6 +10,7 @@ public class Bus extends Car{
     private int busNumber;
     private int passengers;
     private int delay;
+
     Bus(String b, String t, String c, int p, int a, double mV, List<String> stops, int busNumber, Zone currentRoad, String driver) {
         super(b, t, c, p, a, mV, currentRoad, driver);
         setStops(stops);

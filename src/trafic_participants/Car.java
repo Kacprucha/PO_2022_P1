@@ -1,7 +1,5 @@
 package trafic_participants;
 
-import trafic_participants.Automobile;
-import trafic_participants.TrafficParticipants;
 import zones.Zone;
 
 public class Car implements TrafficParticipants, Automobile {
@@ -59,6 +57,10 @@ public class Car implements TrafficParticipants, Automobile {
 
     public void setCurrentRoad(Zone currentRoad) {
         this.currentRoad = currentRoad;
+    }
+
+    public Zone getCurrentRoad() {
+        return currentRoad;
     }
 
     @Override
@@ -126,6 +128,7 @@ public class Car implements TrafficParticipants, Automobile {
     public void beep(){
 
     }
+
     class Lights{
         private String color;
         private int brightness;
