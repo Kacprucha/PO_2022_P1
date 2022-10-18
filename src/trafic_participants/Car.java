@@ -2,22 +2,27 @@ package trafic_participants;
 
 import trafic_participants.Automobile;
 import trafic_participants.TrafficParticipants;
+import zones.Zone;
 
 public class Car implements TrafficParticipants, Automobile {
     private String brand;
     private String typeOfCar;
     private String color;
+    private String driver;
     private int productionDate;
     private int amountOfSeats;
     private double maxVelocity;
+    private Zone currentRoad;
 
-    Car(String b, String t,  String c, int p, int a, double mV){
+    Car(String b, String t,  String c, int p, int a, double mV, Zone currentRoad, String driver){
         setBrand(b);
         setTypeOfCar(t);
         setColor(c);
         setProductionDate(p);
         setAmountOfSeats(a);
         setMaxVelocity(mV);
+        setCurrentRoad(currentRoad);
+        setDriver(driver);
     }
 
     @Override
@@ -34,6 +39,11 @@ public class Car implements TrafficParticipants, Automobile {
         this.color = color;
     }
 
+
+    public void setDriver(String driver){
+        this.driver = driver;
+    }
+
     public void setProductionDate(int productionDate) {
         this.productionDate = productionDate;
     }
@@ -45,6 +55,10 @@ public class Car implements TrafficParticipants, Automobile {
     @Override
     public void setMaxVelocity(double maxVelocity) {
         this.maxVelocity = maxVelocity;
+    }
+
+    public void setCurrentRoad(Zone currentRoad) {
+        this.currentRoad = currentRoad;
     }
 
     @Override
@@ -59,6 +73,10 @@ public class Car implements TrafficParticipants, Automobile {
     @Override
     public String getColor() {
         return color;
+    }
+
+    public String getDriver() {
+        return driver;
     }
 
     public int getProductionDate() {
@@ -107,5 +125,69 @@ public class Car implements TrafficParticipants, Automobile {
     @Override
     public void beep(){
 
+    }
+    class Lights{
+        private String color;
+        private int brightness;
+        private double radius;
+
+        Lights(String color, int brightness, double radius){
+            setColor(color);
+            setBrightness(brightness);
+            setRadius(radius);
+        }
+
+        public void setColor(String color) {
+            this.color = color;
+        }
+
+        public void setBrightness(int brightness) {
+            this.brightness = brightness;
+        }
+
+        public void setRadius(double radius) {
+            this.radius = radius;
+        }
+        public String getColor() {
+            return color;
+        }
+        public int getBrightness() {
+            return brightness;
+        }
+
+        public double getRadius() {
+            return radius;
+        }
+    }
+    class Radio{
+        private String brand;
+        private double signal;
+        private boolean smartRadio;
+
+        Radio(String brand, double signal){
+            setBrand(brand);
+            setSignal(signal);
+            smartRadio = false;
+        }
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+
+        public void setSignal(double signal) {
+            this.signal = signal;
+        }
+
+        public void setSmartRadio() {
+            smartRadio = true;
+        }
+
+        public String getBrand() {
+            return brand;
+        }
+
+        public double getSignal() {
+            return signal;
+        }
     }
 }
