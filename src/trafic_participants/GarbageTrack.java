@@ -11,8 +11,9 @@ public class GarbageTrack extends Car{
     private List<String> addresses = new ArrayList<String>();
     private final int LIMIT = 1000;
 
-    GarbageTrack(String b, String t, String c, int p, int a, double mV, Zone currentRoad, String driver, String type, int amount, List<String> addresses) {
-        super(b, t, c, p, a, mV, currentRoad, driver);
+    GarbageTrack(String b, String t, String c, int p, int a, double mV, Zone currentRoad, String driver, int sx, int sy,
+                 int ex, int ey, String type, int amount, List<String> addresses) {
+        super(b, t, c, p, a, mV, currentRoad, driver, sx, sy, ex, ey);
         setTypeOfGarbage(type);
         setAmountOfCargo(amount);
         setAddresses(addresses);

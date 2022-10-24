@@ -9,9 +9,9 @@ public class Truck extends Car {
     private double weight;
     private double height;
 
-    Truck(String b, String t, String c, int p, int a, double mV, Zone currentRoad, String driver,
-          double capacity, double enginePower, double length, double weight, double height) {
-        super(b, t, c, p, a, mV, currentRoad, driver);
+    Truck(String b, String t, String c, int p, int a, double mV, Zone currentRoad, String driver, int sx, int sy, int ex,
+          int ey, double capacity, double enginePower, double length, double weight, double height) {
+        super(b, t, c, p, a, mV, currentRoad, driver, sx, sy, ex, ey);
         setCapacity(capacity);
         setEnginePower(enginePower);
         setLength(length);

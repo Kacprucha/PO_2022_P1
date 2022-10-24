@@ -1,11 +1,13 @@
 package trafic_participants;
 
+import zones.Zone;
+
 public interface TrafficParticipants {
     public void go();
 
     public void stop();
 
-    public void turn(char c);
+    public void changeZone(Zone zone);
 
     public boolean ifIamOnTheRightZone(String zone);
 

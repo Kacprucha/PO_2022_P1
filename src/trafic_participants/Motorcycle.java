@@ -2,6 +2,7 @@ package trafic_participants;
 
 import trafic_participants.Automobile;
 import trafic_participants.TrafficParticipants;
+import zones.Zone;
 
 public class Motorcycle implements TrafficParticipants, Automobile {
     private String brand;
@@ -75,7 +76,7 @@ public class Motorcycle implements TrafficParticipants, Automobile {
     }
 
     @Override
-    public void turn(char c) {
+    public void changeZone(Zone zone) {
 
     }
 

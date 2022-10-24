@@ -11,8 +11,12 @@ public class Car implements TrafficParticipants, Automobile {
     private int amountOfSeats;
     private double maxVelocity;
     private Zone currentRoad;
+    private int startPositionX;
+    private int startPositionY;
+    private int endPositionX;
+    private int endPositionY;
 
-    Car(String b, String t,  String c, int p, int a, double mV, Zone currentRoad, String driver){
+    Car(String b, String t,  String c, int p, int a, double mV, Zone currentRoad, String driver, int sx, int sy, int ex, int ey){
         setBrand(b);
         setTypeOfCar(t);
         setColor(c);
@@ -21,6 +25,10 @@ public class Car implements TrafficParticipants, Automobile {
         setMaxVelocity(mV);
         setCurrentRoad(currentRoad);
         setDriver(driver);
+        setStartPositionX(sx);
+        setStartPositionY(sy);
+        setEndPositionX(sx);
+        setEndPositionY(sy);
     }
 
     @Override
@@ -105,8 +113,10 @@ public class Car implements TrafficParticipants, Automobile {
     }
 
     @Override
-    public void turn(char c) {
-
+    public void changeZone(Zone zone) {
+        if(currentRoad.vehicleCanMoveToTheOtherZone(zone.getId(), "Aoutomobile", getStartPositionX())) {
+            currentRoad = zone;
+        }
     }
 
     @Override
@@ -127,6 +137,38 @@ public class Car implements TrafficParticipants, Automobile {
     @Override
     public void beep(){
 
+    }
+
+    public int getStartPositionX() {
+        return startPositionX;
+    }
+
+    public void setStartPositionX(int startPositionX) {
+        this.startPositionX = startPositionX;
+    }
+
+    public int getStartPositionY() {
+        return startPositionY;
+    }
+
+    public void setStartPositionY(int startPositionY) {
+        this.startPositionY = startPositionY;
+    }
+
+    public int getEndPositionX() {
+        return endPositionX;
+    }
+
+    public void setEndPositionX(int endPositionX) {
+        this.endPositionX = endPositionX;
+    }
+
+    public int getEndPositionY() {
+        return endPositionY;
+    }
+
+    public void setEndPositionY(int endPositionY) {
+        this.endPositionY = endPositionY;
     }
 
     class Lights{

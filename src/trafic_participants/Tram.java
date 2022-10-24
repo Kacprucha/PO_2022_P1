@@ -1,5 +1,7 @@
 package trafic_participants;
 
+import zones.Zone;
+
 public class Tram implements TrafficParticipants, Automobile {
     private String brand;
     private String color;
@@ -82,7 +84,7 @@ public class Tram implements TrafficParticipants, Automobile {
     }
 
     @Override
-    public void turn(char c) {
+    public void changeZone(Zone zone) {
 
     }
 

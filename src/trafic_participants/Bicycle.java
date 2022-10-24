@@ -1,5 +1,7 @@
 package trafic_participants;
 
+import zones.Zone;
+
 public class Bicycle implements TrafficParticipants, Footmobile {
     private String typeOfBicycle;
     private String color;
@@ -48,7 +50,7 @@ public class Bicycle implements TrafficParticipants, Footmobile {
     }
 
     @Override
-    public void turn(char c) {
+    public void changeZone(Zone zone) {
 
     }
 

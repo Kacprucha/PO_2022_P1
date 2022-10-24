@@ -1,5 +1,7 @@
 package trafic_participants;
 
+import zones.Zone;
+
 public class Skateboard implements TrafficParticipants, Footmobile {
     private String brand;
     private double maxVelocity;
@@ -38,7 +40,7 @@ public class Skateboard implements TrafficParticipants, Footmobile {
     }
 
     @Override
-    public void turn(char c) {
+    public void changeZone(Zone zone) {
 
     }
 

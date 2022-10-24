@@ -1,6 +1,7 @@
 package trafic_participants;
 
 import trafic_participants.TrafficParticipants;
+import zones.Zone;
 
 public class Pedestrian implements TrafficParticipants, Footmobile {
     private String name;
@@ -70,7 +71,7 @@ public class Pedestrian implements TrafficParticipants, Footmobile {
     }
 
     @Override
-    public void turn(char c) {
+    public void changeZone(Zone zone) {
 
     }
 
